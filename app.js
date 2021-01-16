@@ -1,1 +1,1 @@
-console.log("Test")
+const app = Vue.createApp()
