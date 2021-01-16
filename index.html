@@ -82,7 +82,21 @@
             <a :href="url">Best website ever</a>
 
             <!-- Computed properties -->
-            <p>{{filteredBooks}}</p>
+            <!-- <p>{{filteredBooks}}</p> -->
+            <div v-if="showBooks">
+                Age: {{age}}
+                <ul>
+                    <li
+                        v-for="filteredBook in filteredBooks"
+                        :class="{fav: filteredBook.isFav}"
+                        @click="filteredBook.isFav = !filteredBook.isFav"
+                    >
+                        <img :src="filteredBook.img" alt="filteredBook.title" />
+                        <h3>{{filteredBook.title}}</h3>
+                        <p>{{filteredBook.author}}</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </body>
     <script src="app.js"></script>
