@@ -15,6 +15,9 @@ const app = Vue.createApp({
       //   this.title = "Words of Radiance"
       this.title = title
     },
+    toggleShowBooks() {
+      this.showBooks = !this.showBooks
+    },
   },
 })
 

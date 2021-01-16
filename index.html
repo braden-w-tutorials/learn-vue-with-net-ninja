@@ -16,6 +16,10 @@
       <!-- <div @click="title = 'something else'">Change Title</div> -->
       <!-- <div @click="changeTitle">Change Title</div> -->
       <div @click="changeTitle('Oathbringer')">Change Title</div>
+      <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide Books</span>
+        <span v-else>Show Books</span>
+      </button>
     </div>
   </body>
   <script src="app.js"></script>
