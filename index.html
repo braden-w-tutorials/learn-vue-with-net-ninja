@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning Vue</title>
-    <script src="https://unpkg.com/vue@3.0.2"></script>
-  </head>
-  <body>
-    <h1>Hello, Vue :)</h1>
-    <div id="app">
-      <div v-if="showBooks"><h2>{{title}} - {{author}} - {{age}}</h2></div>
-      <!-- Vue Directives (inside quotes of v-xxx is pure JS, no {{}} needed) -->
-      <button v-on:click="age++">Increase age</button>
-      <button v-on:click="age--">Decrease age</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Learning Vue</title>
+        <script src="https://unpkg.com/vue@3.0.2"></script>
+    </head>
+    <body>
+        <h1>Hello, Vue :)</h1>
+        <div id="app">
+            <div v-if="showBooks">
+                <h2>{{title}} - {{author}} - {{age}}</h2>
+            </div>
+            <!-- Vue Directives (inside quotes of v-xxx is pure JS, no {{}} needed) -->
+            <button v-on:click="age++">Increase age</button>
+            <button v-on:click="age--">Decrease age</button>
 
-      <!-- <div @click="title = 'something else'">Change Title</div> -->
-      <!-- <div @click="changeTitle">Change Title</div> -->
-      <div @click="changeTitle('Oathbringer')">Change Title</div>
+            <!-- <div @click="title = 'something else'">Change Title</div> -->
+            <!-- <div @click="changeTitle">Change Title</div> -->
+            <div @click="changeTitle('Oathbringer')">Change Title</div>
 
-      <!-- v-if-else -->
-      <button @click="toggleShowBooks">
-        <span v-if="showBooks">Hide Books</span>
-        <span v-else>Show Books</span>
-      </button>
+            <!-- v-if-else -->
+            <button @click="toggleShowBooks">
+                <span v-if="showBooks">Hide Books</span>
+                <span v-else>Show Books</span>
+            </button>
 
-      <!-- v-show -->
-      <div v-show="showBooks">Currently showing books</div>
+            <!-- v-show -->
+            <div v-show="showBooks">Currently showing books</div>
 
-      <!-- Difference between v-if and v-show: v-if modifies DOM (slower), v-show
-      uses CSS (faster). -->
-    </div>
-  </body>
-  <script src="app.js"></script>
+            <!-- Difference between v-if and v-show: v-if modifies DOM (slower), v-show uses CSS (faster). -->
+
+            <!-- Mouse events -->
+            <div class="box" @mouseover="handleEvent">mouseover (enter)</div>
+            <div class="box" @mouseleave="handleEvent">mouseleave</div>
+            <div class="box" @doubleclick="handleEvent">double click</div>
+            <div class="box" @mouseover="handleEvent">click</div>
+        </div>
+    </body>
+    <script src="app.js"></script>
 </html>
