@@ -18,10 +18,17 @@
       <!-- <div @click="changeTitle">Change Title</div> -->
       <div @click="changeTitle('Oathbringer')">Change Title</div>
 
+      <!-- v-if-else -->
       <button @click="toggleShowBooks">
         <span v-if="showBooks">Hide Books</span>
         <span v-else>Show Books</span>
       </button>
+
+      <!-- v-show -->
+      <div v-show="showBooks">Currently showing books</div>
+
+      <!-- Difference between v-if and v-show: v-if modifies DOM (slower), v-show
+      uses CSS (faster). -->
     </div>
   </body>
   <script src="app.js"></script>
