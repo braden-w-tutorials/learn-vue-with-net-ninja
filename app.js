@@ -14,9 +14,20 @@ const app = Vue.createApp({
                     title: "name of the wind",
                     author: "patrick rothfuss",
                     img: "assets/1.jpg",
+                    isFav: true,
                 },
-                { title: "book 1", author: "author 1", img: "assets/2.jpg" },
-                { title: "book 2", author: "author 2", img: "assets/3.jpg" },
+                {
+                    title: "book 2",
+                    author: "author 2",
+                    img: "assets/3.jpg",
+                    isFav: false,
+                },
+                {
+                    title: "book 1",
+                    author: "author 1",
+                    img: "assets/2.jpg",
+                    isFav: false,
+                },
             ],
             url: "https://www.google.com/",
         };
