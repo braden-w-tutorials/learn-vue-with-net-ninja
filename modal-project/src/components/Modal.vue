@@ -8,6 +8,7 @@
 </template>
 
 <style scoped>
+/* Use scoped to apply to only this component */
 .modal {
   width: 400px;
   padding: 20px;
@@ -24,5 +25,6 @@
 }
 h1 {
   color: green;
+  border: none;
 }
 </style>
