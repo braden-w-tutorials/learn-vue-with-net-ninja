@@ -9,7 +9,7 @@
   <body>
     <h1>Hello, Vue :)</h1>
     <div id="app">
-      <h2>{{title}} - {{author}} - {{age}}</h2>
+      <div v-if="true"><h2>{{title}} - {{author}} - {{age}}</h2></div>
       <!-- Vue Directive (inside quotes is pure JS, no {{}} needed) -->
       <button v-on:click="age++">Increase age</button>
       <button v-on:click="age--">Decrease age</button>
