@@ -14,6 +14,7 @@ const app = Vue.createApp({
                 { title: "book 1", author: "author 1" },
                 { title: "book 2", author: "author 2" },
             ],
+            url: "https://www.google.com/",
         };
     },
     methods: {
