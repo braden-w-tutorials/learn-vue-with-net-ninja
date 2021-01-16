@@ -53,6 +53,11 @@ const app = Vue.createApp({
             this.y = eventObject.offsetY;
         },
     },
+    computed: {
+        filteredBooks() {
+            return "Hello!";
+        },
+    },
 });
 
 // Grants Vue complete access to everything in #app element (nothing outside)
