@@ -10,12 +10,14 @@
     <h1>Hello, Vue :)</h1>
     <div id="app">
       <div v-if="showBooks"><h2>{{title}} - {{author}} - {{age}}</h2></div>
-      <!-- Vue Directive (inside quotes of v-xxx is pure JS, no {{}} needed) -->
+      <!-- Vue Directives (inside quotes of v-xxx is pure JS, no {{}} needed) -->
       <button v-on:click="age++">Increase age</button>
       <button v-on:click="age--">Decrease age</button>
+
       <!-- <div @click="title = 'something else'">Change Title</div> -->
       <!-- <div @click="changeTitle">Change Title</div> -->
       <div @click="changeTitle('Oathbringer')">Change Title</div>
+
       <button @click="toggleShowBooks">
         <span v-if="showBooks">Hide Books</span>
         <span v-else>Show Books</span>
