@@ -2,7 +2,7 @@
     <h1>{{ title }}</h1>
     <input type="text" ref="name" />
     <button @click="handleClick">Click me</button>
-    <Modal header="Hello World" />
+    <Modal header="Hello World" text="Text" />
 </template>
 
 <script>
