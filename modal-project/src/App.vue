@@ -4,6 +4,10 @@
     <button @click="handleClick">Click me</button>
     <div v-if="showModal">
         <Modal theme="sale" @Close="toggleModal">
+            <template v-slot:links>
+                <a href="#">Sign Up</a>
+                <a href="#">Log In</a>
+            </template>
             <h1>Hello World!</h1>
             <p>Paragraph</p>
         </Modal>
