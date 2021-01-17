@@ -3,12 +3,10 @@
     <input type="text" ref="name" />
     <button @click="handleClick">Click me</button>
     <div v-if="showModal">
-        <Modal
-            :header="header"
-            :text="text"
-            theme="sale"
-            @Close="toggleModal"
-        />
+        <Modal theme="sale" @Close="toggleModal">
+            <h1>Hello World!</h1>
+            <p>Paragraph</p>
+        </Modal>
     </div>
     <button @click="toggleModal">Open modal</button>
 </template>
