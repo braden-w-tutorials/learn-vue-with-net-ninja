@@ -2,7 +2,9 @@
     <h1>{{ title }}</h1>
     <input type="text" ref="name" />
     <button @click="handleClick">Click me</button>
-    <Modal :header="header" :text="text" theme="sale" />
+    <div v-if="showModal">
+        <Modal :header="header" :text="text" theme="sale" />
+    </div>
 </template>
 
 <script>
@@ -14,7 +16,8 @@ export default {
         return {
             title: "My First Vue App :)",
             header: "Hello World",
-            text: "Some text  goes here"
+            text: "Some text  goes here",
+            showModal: false
         };
     },
     methods: {
