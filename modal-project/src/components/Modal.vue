@@ -29,8 +29,15 @@ export default {
     width: 100%;
     height: 100%;
 }
-h1 {
+/* /* h1 {
     color: green;
     border: none;
+} */
+.modal.sale {
+    background: crimson;
+    color: white;
 }
+.modal.sale h1 {
+    color: white;
+} */
 </style>
