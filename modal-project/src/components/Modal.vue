@@ -1,6 +1,6 @@
 <template>
     <div class="backdrop">
-        <div class="modal">
+        <div class="modal" :class="{ sale: theme === 'sale' }">
             <h1>{{ header }}</h1>
             <p>{{ text }}</p>
         </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    props: ["header", "text"]
+    props: ["header", "text", "theme"]
 };
 </script>
 
