@@ -5,19 +5,21 @@
 <script>
 export default {
     props: ["delay"],
-    data(){
+    data() {
         return {
             showBlock: false
-        }
-    }
-    mounted(){
-        setTimeout(()=>{this.showBlock = true}, this.delay)
-
-    updated(){
-        console.log("Updated")
-    }}
-    unmounted(){
-        console.log("Unmounted")
+        };
+    },
+    mounted() {
+        setTimeout(() => {
+            this.showBlock = true;
+        }, this.delay);
+    },
+    updated() {
+        console.log("Updated");
+    },
+    unmounted() {
+        console.log("Unmounted");
     }
 };
 </script>
