@@ -12,9 +12,12 @@ export default {
     }
     mounted(){
         setTimeout(()=>{this.showBlock = true}, this.delay)
-    }
+
     updated(){
         console.log("Updated")
+    }}
+    unmounted(){
+        console.log("Unmounted")
     }
 };
 </script>
