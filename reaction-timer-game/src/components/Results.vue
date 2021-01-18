@@ -1,5 +1,6 @@
 <template>
     <p>Reaction Time: {{ score }} ms</p>
+    <p class="rank">{{ rank }}</p>
 </template>
 
 <script>
@@ -7,7 +8,7 @@ export default {
     props: ["score"],
     data() {
         return {
-            ranke: null
+            rank: null
         };
     },
     mounted() {
