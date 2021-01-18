@@ -1,7 +1,8 @@
 <template>
     <h1>Reaction Timing Game</h1>
     <button @click="startTimer" :disabled="isPlaying">Play</button>
-    <ClickMe v-if="isPlaying" :delay="delay" />
+    <ClickMe v-if="isPlaying" :delay="delay" @end="endGame" />
+    <p>Reaction Time: {{ score }} ms</p>
 </template>
 
 <script>
@@ -13,13 +14,18 @@ export default {
     data() {
         return {
             isPlaying: false,
-            delay: null
+            delay: null,
+            score: null
         };
     },
     methods: {
         startTimer() {
             this.isPlaying = true;
-            this.delay = 2000 + Math.random() * 5000;
+            this.delay = 1000 + Math.random() * 3000;
+        },
+        endGame(reactionTime) {
+            this.score = reactionTime;
+            this.isPlaying = false;
         }
     }
 };
