@@ -2,15 +2,16 @@
     <h1>Reaction Timing Game</h1>
     <button @click="startTimer" :disabled="isPlaying">Play</button>
     <ClickMe v-if="isPlaying" :delay="delay" @end="endGame" />
-    <p v-if="showResults">Reaction Time: {{ score }} ms</p>
+    <Results v-if="showResults" :score="score"></Results>
 </template>
 
 <script>
 import ClickMe from "./components/ClickMe.vue";
+import Results from "./components/Results.vue";
 
 export default {
     name: "App",
-    components: { ClickMe },
+    components: { ClickMe, Results },
     data() {
         return {
             isPlaying: false,
