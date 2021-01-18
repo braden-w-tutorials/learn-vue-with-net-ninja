@@ -2,7 +2,7 @@
     <h1>Reaction Timing Game</h1>
     <button @click="startTimer" :disabled="isPlaying">Play</button>
     <ClickMe v-if="isPlaying" :delay="delay" @end="endGame" />
-    <p>Reaction Time: {{ score }} ms</p>
+    <p v-if="showResults">Reaction Time: {{ score }} ms</p>
 </template>
 
 <script>
@@ -15,17 +15,20 @@ export default {
         return {
             isPlaying: false,
             delay: null,
-            score: null
+            score: null,
+            showResults: false
         };
     },
     methods: {
         startTimer() {
             this.isPlaying = true;
             this.delay = 1000 + Math.random() * 3000;
+            this.showResults = false;
         },
         endGame(reactionTime) {
             this.score = reactionTime;
             this.isPlaying = false;
+            this.showResults = true;
         }
     }
 };
