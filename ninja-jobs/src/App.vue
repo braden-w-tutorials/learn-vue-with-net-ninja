@@ -5,9 +5,23 @@
     <router-link :to="{ name: 'About' }">About</router-link> |
     <router-link :to="{ name: 'Jobs' }">Jobs</router-link>
   </div>
+  <button @click="redirect">Redirect</button>
+  <button @click="back">Go back</button>
+  <button @click="forward">Go forward</button>
   <router-view />
 </template>
 
+<script>
+export default {
+  methods: {
+    redirect() {},
+    back() {
+      this.$router.go(-1)
+    },
+    forward() {},
+  },
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
