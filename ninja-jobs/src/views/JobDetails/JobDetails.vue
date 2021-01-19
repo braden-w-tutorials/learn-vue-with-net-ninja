@@ -1,9 +1,11 @@
 <template>
-  <!-- <h1>Job Details Landing Page</h1> -->
-  <h1>{{ job.title }}</h1>
-  <!-- Passes id from url as a param of $route -->
-  <p>The job id is {{ id }}</p>
-  <p>{{ job.details }}</p>
+  <div v-if="job">
+    <!-- <h1>Job Details Landing Page</h1> -->
+    <h1>{{ job.title }}</h1>
+    <!-- Passes id from url as a param of $route -->
+    <p>The job id is {{ id }}</p>
+    <p>{{ job.details }}</p>
+  </div>
 </template>
 
 <script>
