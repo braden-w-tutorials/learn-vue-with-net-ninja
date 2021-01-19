@@ -1,6 +1,6 @@
 <template>
   <form>
-    <label><Email:/label></label>
+    <label>Email:</label>
     <input type="email" name="E-mail" required />
   </form>
 </template>
@@ -10,7 +10,7 @@ export default {};
 </script>
 
 <style>
-style > form {
+form {
   max-width: 420px;
   margin: 30px auto;
   background: white;
@@ -37,5 +37,4 @@ select {
   border-bottom: 1px solid #ddd;
   color: #555;
 }
-</style>
 </style>
