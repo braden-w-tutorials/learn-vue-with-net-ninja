@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link>
+    <router-link to="/">Home</router-link> |
     <!-- Use data binding to match with name -->
     <router-link :to="{ name: 'About' }">About</router-link>
   </div>
