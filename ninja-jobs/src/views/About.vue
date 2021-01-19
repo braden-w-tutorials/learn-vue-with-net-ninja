@@ -27,6 +27,5 @@
       necessitatibus tempora ea temporibus saepe. Totam voluptate quae illum
       voluptatum architecto recusandae quam dolor nulla necessitatibus.
     </p>
-    >
   </div>
 </template>
