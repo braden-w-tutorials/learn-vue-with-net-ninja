@@ -1,12 +1,21 @@
 <template>
   <form>
     <label>Email:</label>
-    <input type="email" name="E-mail" required />
+    <input type="email" name="E-mail" required v-model="email" />
+    <label>Password:</label>
+    <input type="password" name="E-mail" required v-model="password" />
   </form>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      email: "",
+      password: ""
+    };
+  }
+};
 </script>
 
 <style>
