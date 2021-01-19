@@ -76,6 +76,9 @@ export default {
         this.password.length > 5
           ? ""
           : "Password must be at least 6 characters long";
+      if (!this.passwordError) {
+        console.log(this);
+      }
     }
   }
 };
