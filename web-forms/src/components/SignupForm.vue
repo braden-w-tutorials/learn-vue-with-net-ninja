@@ -25,7 +25,7 @@
       <input type="checkbox" v-model="terms" required />
       <label>Accept terms and conditions</label>
     </div>
-    <div class="submit"><button>Create Account</button></div>
+    <div class="submit"><button>Create Account</button><div v-if:"passwordError">{{passwordError}}</div></div>
     <!-- <div>
       <input type="checkbox" value="shaun" v-model="names" />
       <label>Shaun</label>
@@ -50,7 +50,8 @@ export default {
       role: "designer",
       terms: false,
       names: [],
-      skills: []
+      skills: [],
+      passwordError: ""
     };
   },
   methods: {
@@ -68,7 +69,10 @@ export default {
       });
     },
     handleSubmit() {
-      console.log("Form submitted");
+      this.passwordError =
+        this.password.length > 5
+          ? ""
+          : "Password must be at least 6 characters long";
     }
   }
 };
