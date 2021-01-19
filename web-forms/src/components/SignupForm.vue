@@ -19,7 +19,7 @@
       <label>Accept terms and conditions</label>
     </div>
 
-    <div>
+    <!-- <div>
       <input type="checkbox" value="shaun" v-model="names" />
       <label>Shaun</label>
     </div>
@@ -30,7 +30,7 @@
     <div>
       <input type="checkbox" value="mario" v-model="names" />
       <label>Mario</label>
-    </div>
+    </div> -->
   </form>
 </template>
 
@@ -50,7 +50,7 @@ export default {
     addSkill(e) {
       if (e.key === "," && this.tempSkill) {
         if (!this.skills.includes(this.tempSkill)) {
-          this.skills.push(this.tempSkill);
+          this.skills.push(this.tempSkill.slice(0, -1));
         }
         this.tempSkill = "";
       }
