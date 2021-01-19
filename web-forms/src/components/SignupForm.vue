@@ -25,7 +25,10 @@
       <input type="checkbox" v-model="terms" required />
       <label>Accept terms and conditions</label>
     </div>
-    <div class="submit"><button>Create Account</button><div v-if:"passwordError">{{passwordError}}</div></div>
+    <div class="submit">
+      <button>Create Account</button>
+      <div v-if="passwordError" class="error">{{ passwordError }}</div>
+    </div>
     <!-- <div>
       <input type="checkbox" value="shaun" v-model="names" />
       <label>Shaun</label>
