@@ -1,6 +1,12 @@
 <template>
   <h1></h1>
-  <div v-for="job in jobs" :key="job.id">{{ job.title }}</div>
+  <div v-for="job in jobs" :key="job.id">
+    <router-link :to="{ name: 'JobDetails', params: { id: job.id } }">
+      <h2>
+        {{ job.title }}
+      </h2>
+    </router-link>
+  </div>
 </template>
 
 <script>
