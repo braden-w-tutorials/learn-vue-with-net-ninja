@@ -11,6 +11,7 @@
 export default {
   name: "Home",
   setup() {console.log('setup')
+  // These are not reactive values
   let name = 'mario
   let age = 30
   return{name:name, age: age'},
