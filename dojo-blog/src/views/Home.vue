@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { ref, reactive, compute } from "vue"
+import { ref, reactive, computed } from "vue"
 
 // @ is an alias to /src
 
@@ -52,7 +52,7 @@ export default {
     const updateNinjaTwo = () => {
       ninjaTwo.age = 40
     }
-    it
+
     // Refs are generally better because they are mutable through .value. Reactive cannot change if value is immutable like a string; it must be an object
 
     const computed = computed(() => {
