@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     Home
-    <p>My name is {{ name }} and my age is {{ age }}</p>
+    <p ref="p">My name is {{ name }} and my age is {{ age }}</p>
     <button @click="handleClick">Click me</button>
   </div>
 </template>
