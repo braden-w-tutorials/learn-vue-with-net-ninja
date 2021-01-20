@@ -69,9 +69,13 @@ export default {
     const matchingNames = computed(() => {
       return names.value.filter((name) => name.includes(search.value))
     })
+
+    //Watches variable
     watch(search, () => {
       console.log("Watched")
     })
+
+    //Watches entire document
     watchEffect(() => {
       console.log("Effect watched", search.value)
     })
