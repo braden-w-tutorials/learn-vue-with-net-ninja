@@ -42,7 +42,6 @@ export default {
     }
 
     // We can pass any value into ref
-
     const ninjaOne = ref({ name: "mario", age: 30 })
     const ninjaOne = reactive({ name: "luigi", age: 35 })
     const updateNinjaOne = () => {
@@ -51,6 +50,8 @@ export default {
     const updateNinjaTwo = () => {
       ninjaTwo.age = 40
     }
+    it
+    // Refs are generally better because they are mutable through .value. Reactive cannot change if value is immutable like a string; it must be an object
 
     return {
       name,
