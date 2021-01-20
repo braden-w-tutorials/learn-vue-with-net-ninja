@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { computed, ref, reactive, watch } from "vue"
+import { computed, ref, reactive, watch, watchEffect } from "vue"
 
 // @ is an alias to /src
 
@@ -71,6 +71,9 @@ export default {
     })
     watch(search, () => {
       console.log("Watched")
+    })
+    watchEffect(search, () => {
+      console.log("Effect watched", search.value)
     })
     return {
       name,
