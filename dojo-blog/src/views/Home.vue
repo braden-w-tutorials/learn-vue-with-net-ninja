@@ -12,6 +12,9 @@
     <p>{{ ninjaTwo.name }}</p>
     <button @click="updateNinjaTwo">Add to Ninja Age by 10</button>
     <p>Computed value is {{ compute }}</p>
+    <h2>Using search</h2>
+    <input type="text" v-model="search" />
+    <div v-for="name in names" :key="name">{{ name }}</div>
   </div>
 </template>
 
@@ -55,9 +58,14 @@ export default {
 
     // Refs are generally better because they are mutable through .value. Reactive cannot change if value is immutable like a string; it must be an object
 
+    //Computed
     const compute = computed(() => {
       return "shaun"
     })
+
+    const search = ref("")
+    const names = ["mario", "yoshi", "bowser"]
+
     return {
       name,
       age,
@@ -67,6 +75,8 @@ export default {
       ninjaTwo,
       updateNinjaTwo,
       compute,
+      search,
+      names,
     }
   },
 }
