@@ -5,7 +5,9 @@
     <button @click="handleClick">Click me</button>
     <button @click="age++">Add to Age</button>
     <input type="text" v-model="name" />
+    <h2>Using refs</h2>
     <p>{{ ninjaOne.name }} - {{ ninjaOne.age }}</p>
+    <h2>Using reactive</h2>
     <button @click="updateNinjaOne">Add to Ninja Age by 10</button>
   </div>
 </template>
