@@ -7,8 +7,6 @@
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld,
-  },
+  setup() {},
 }
 </script>
