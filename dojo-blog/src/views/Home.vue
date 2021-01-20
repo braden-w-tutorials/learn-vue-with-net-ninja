@@ -5,11 +5,13 @@
     <button @click="handleClick">Click me</button>
     <button @click="age++">Add to Age</button>
     <input type="text" v-model="name" />
+    <p>{{ ninjaOne.name }} - {{ ninjaOne.age }}</p>
+    <button @click="updateNinjaOne">Add to Ninja Age by 10</button>
   </div>
 </template>
 
 <script>
-import { ref } from "vue"
+import { ref, reactive } from "vue"
 
 // @ is an alias to /src
 
@@ -35,7 +37,15 @@ export default {
       name.value = "luigi"
       age.value = 35
     }
-    return { name, age, handleClick }
+
+    // We can pass any value into ref
+    const ninjaOne = ref({ name: "mario", age: 30 })
+
+    const updateNinjaOne = () => {
+      ninjaOne.value.age = 40
+    }
+
+    return { name, age, handleClick, ninjaOne, updateNinjaOne }
   },
 }
 </script>
