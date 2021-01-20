@@ -44,7 +44,7 @@ export default {
 
     // We can pass any value into ref
     const ninjaOne = ref({ name: "mario", age: 30 })
-    const ninjaOne = reactive({ name: "luigi", age: 35 })
+    const ninjaTwo = reactive({ name: "luigi", age: 35 })
     const updateNinjaOne = () => {
       ninjaOne.value.age = 40
     }
