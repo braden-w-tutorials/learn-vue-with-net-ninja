@@ -11,12 +11,12 @@
     <h2>Using reactive</h2>
     <p>{{ ninjaTwo.name }}</p>
     <button @click="updateNinjaTwo">Add to Ninja Age by 10</button>
-    <p>Computed value is {{ computed }}</p>
+    <p>Computed value is {{ compute }}</p>
   </div>
 </template>
 
 <script>
-import { ref, reactive, computed } from "vue"
+import { computed, ref, reactive } from "vue"
 
 // @ is an alias to /src
 
@@ -55,7 +55,7 @@ export default {
 
     // Refs are generally better because they are mutable through .value. Reactive cannot change if value is immutable like a string; it must be an object
 
-    const computed = computed(() => {
+    const compute = computed(() => {
       return "shaun"
     })
     return {
@@ -66,7 +66,7 @@ export default {
       updateNinjaOne,
       ninjaTwo,
       updateNinjaTwo,
-      computed,
+      compute,
     }
   },
 }
