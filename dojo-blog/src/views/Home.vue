@@ -72,7 +72,7 @@ export default {
     watch(search, () => {
       console.log("Watched")
     })
-    watchEffect(search, () => {
+    watchEffect(() => {
       console.log("Effect watched", search.value)
     })
     return {
