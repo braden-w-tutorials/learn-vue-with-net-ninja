@@ -7,8 +7,9 @@
     <input type="text" v-model="name" />
     <h2>Using refs</h2>
     <p>{{ ninjaOne.name }} - {{ ninjaOne.age }}</p>
-    <h2>Using reactive</h2>
     <button @click="updateNinjaOne">Add to Ninja Age by 10</button>
+    <h2>Using reactive</h2>
+    <p>{{ ninjaTwo.name }}</p>
   </div>
 </template>
 
@@ -41,13 +42,25 @@ export default {
     }
 
     // We can pass any value into ref
-    const ninjaOne = ref({ name: "mario", age: 30 })
 
+    const ninjaOne = ref({ name: "mario", age: 30 })
+    const ninjaOne = reactive({ name: "luigi", age: 35 })
     const updateNinjaOne = () => {
       ninjaOne.value.age = 40
     }
+    const updateNinjaTwo = () => {
+      ninjaTwo.age = 40
+    }
 
-    return { name, age, handleClick, ninjaOne, updateNinjaOne }
+    return {
+      name,
+      age,
+      handleClick,
+      ninjaOne,
+      updateNinjaOne,
+      ninjaTwo,
+      updateNinjaTwo,
+    }
   },
 }
 </script>
