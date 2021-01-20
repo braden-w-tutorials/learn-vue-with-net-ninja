@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { ref, reactive } from "vue"
+import { ref, reactive, compute } from "vue"
 
 // @ is an alias to /src
 
