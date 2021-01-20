@@ -10,6 +10,7 @@
     <button @click="updateNinjaOne">Add to Ninja Age by 10</button>
     <h2>Using reactive</h2>
     <p>{{ ninjaTwo.name }}</p>
+    <p>Computed value is {{ computed }}</p>
   </div>
 </template>
 
@@ -64,6 +65,7 @@ export default {
       updateNinjaOne,
       ninjaTwo,
       updateNinjaTwo,
+      computed,
     }
   },
 }
