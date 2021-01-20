@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { computed, ref, reactive } from "vue"
+import { computed, ref, reactive, watch } from "vue"
 
 // @ is an alias to /src
 
@@ -68,6 +68,9 @@ export default {
 
     const matchingNames = computed(() => {
       return names.value.filter((name) => name.includes(search.value))
+    })
+    watch(search, () => {
+      console.log("Watched")
     })
     return {
       name,
