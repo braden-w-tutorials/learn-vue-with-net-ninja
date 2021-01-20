@@ -71,12 +71,12 @@ export default {
     })
 
     //Watches variable
-    watch(search, () => {
+    const stopWatch = watch(search, () => {
       console.log("Watched")
     })
 
     //Watches entire document
-    watchEffect(() => {
+    const stopWatchEffect = watchEffect(() => {
       console.log("Effect watched", search.value)
     })
     return {
