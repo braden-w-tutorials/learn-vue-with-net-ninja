@@ -14,7 +14,7 @@
     <p>Computed value is {{ compute }}</p>
     <h2>Using search</h2>
     <input type="text" v-model="search" />
-    <div v-for="name in names" :key="name">{{ name }}</div>
+    <div v-for="name in matchingNames" :key="name">{{ name }}</div>
   </div>
 </template>
 
@@ -64,7 +64,7 @@ export default {
     })
 
     const search = ref("")
-    const names = ["mario", "yoshi", "bowser"]
+    const names = ref(["mario", "yoshi", "bowser"])
 
     const matchingNames = computed(() => {
       return names.value.filter((name) => name.includes(search.value))
