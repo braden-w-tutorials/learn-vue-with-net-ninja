@@ -66,6 +66,9 @@ export default {
     const search = ref("")
     const names = ["mario", "yoshi", "bowser"]
 
+    const matchingNames = computed(() => {
+      return names.value.filter((name) => name.includes(search.value))
+    })
     return {
       name,
       age,
@@ -77,6 +80,7 @@ export default {
       compute,
       search,
       names,
+      matchingNames,
     }
   },
 }
