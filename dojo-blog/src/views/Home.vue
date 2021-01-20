@@ -53,6 +53,9 @@ export default {
     it
     // Refs are generally better because they are mutable through .value. Reactive cannot change if value is immutable like a string; it must be an object
 
+    const computed = computed(() => {
+      return "shaun"
+    })
     return {
       name,
       age,
