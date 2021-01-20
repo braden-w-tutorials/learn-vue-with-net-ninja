@@ -2,6 +2,7 @@
   <div class="home">
     Home
     <p>My name is {{ name }} and my age is {{ age }}</p>
+    <button @click="handleClick">Click me</button>
   </div>
 </template>
 
@@ -20,8 +21,10 @@ export default {
     let age = 30
     const handleClick = () => {
       console.log(p, p.value)
+      p.value.classList.add("test")
+      p.value.textContent = "hello, ninjas"
     }
-    return { name, age, handleClick }
+    return { name, age, handleClick, p }
   },
 }
 </script>
